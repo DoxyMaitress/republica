@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubinformeMedicos" pageWidth="555" pageHeight="842" columnWidth="515" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1f430f2-3319-4a68-80f3-9f60837bf981">
+	<queryString>
+		<![CDATA[SELECT * FROM medicos]]>
+	</queryString>
+	<title>
+		<band height="60"/>
+	</title>
+	<detail>
+		<band height="800">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="90" y="10" width="300" height="200" uuid="c1f430f2-3319-4a68-80f3-9f60837bf982"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset>
+						<datasetRun subDataset="dataset1" uuid="c1f430f2-3319-4a68-80f3-9f60837bf983">
+							<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.JREmptyDataSource()]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Cantidad de Médicos"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{specialty}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{count}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+			<textField>
+				<reportElement x="0" y="240" width="200" height="20" uuid="3b0e631a-b633-49ed-9437-790025185715"/>
+				<textFieldExpression><![CDATA["Ginecología: " + $F{count_ginecologia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="260" width="200" height="20" uuid="6e315b10-e343-4b50-b533-27f7f9394cc4"/>
+				<textFieldExpression><![CDATA["Otorrinolaringología: " + $F{count_otorrinolaringologia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="280" width="200" height="20" uuid="3c75f4ed-23c5-4ce0-89a6-135aa96947ce"/>
+				<textFieldExpression><![CDATA["Digestivo: " + $F{count_digestivo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="240" width="200" height="20" uuid="21fce0cd-114b-4670-bad1-57d077c369d1"/>
+				<textFieldExpression><![CDATA["Oncología: " + $F{count_oncologia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="260" width="200" height="20" uuid="4cfd9ce7-af5a-4942-9a4a-b6d1fea4ee34"/>
+				<textFieldExpression><![CDATA["Traumatología: " + $F{count_traumatologia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="280" width="200" height="20" uuid="0ada336c-0534-4db0-bda0-83fb120a41f9"/>
+				<textFieldExpression><![CDATA["Enfermería: " + $F{count_enfermeria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="300" width="200" height="20" uuid="accef290-cb65-47cd-8ac7-57ae54456285"/>
+				<textFieldExpression><![CDATA["Farmacia: " + $F{count_farmacia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="320" width="200" height="20" uuid="fc02c36c-9710-4636-a220-52defbfcdc7e"/>
+				<textFieldExpression><![CDATA["Urgencias: " + $F{count_urgencias}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

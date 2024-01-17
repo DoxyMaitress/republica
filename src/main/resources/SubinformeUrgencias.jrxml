@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubinformeMedicos" pageWidth="555" pageHeight="842" columnWidth="515" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1f430f2-3319-4a68-80f3-9f60837bf981">
+	<queryString>
+		<![CDATA[SELECT * FROM urgencias]]>
+	</queryString>
+	<title>
+		<band height="60"/>
+	</title>
+	<detail>
+		<band height="800">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="0" y="170" width="200" height="20" uuid="16c8c1ab-e620-4db0-add6-1a7e742ac698"/>
+				<textFieldExpression><![CDATA["Resfriados: " + $F{count_resfriados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="190" width="200" height="20" uuid="39aef17a-0c09-45c7-af79-30cded1412c9"/>
+				<textFieldExpression><![CDATA["Cuento: " + $F{count_cuento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="210" width="200" height="20" uuid="7e9052f1-1f87-425c-bb67-3102b997c5d5"/>
+				<textFieldExpression><![CDATA["Diarrea: " + $F{count_diarrea}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="170" width="200" height="20" uuid="3cefc320-4d80-428f-b0b0-565356fa662a"/>
+				<textFieldExpression><![CDATA["Vómitos: " + $F{count_vomitos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="190" width="200" height="20" uuid="8d8a4438-ad06-4948-ba57-694e3ae38694"/>
+				<textFieldExpression><![CDATA["Rotura de huesos: " + $F{count_rotura_huesos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="210" width="200" height="20" uuid="1c03e50d-da80-40c8-8a2a-5537bd9a0a05"/>
+				<textFieldExpression><![CDATA["Quemados: " + $F{count_quemados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="170" width="200" height="20" uuid="332ce4e4-66e2-4646-9ba6-5ef1567ab7f6"/>
+				<textFieldExpression><![CDATA["Otros: " + $F{count_otros}]]></textFieldExpression>
+			</textField>
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="130" y="10" width="250" height="140" uuid="c1f430f2-3319-4a68-80f3-9f60837bf988"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{reason}]]></keyExpression>
+					<valueExpression><![CDATA[$F{count}]]></valueExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</detail>
+</jasperReport>

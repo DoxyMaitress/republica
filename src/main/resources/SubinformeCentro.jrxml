@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubinformeCentro" pageWidth="555" pageHeight="842" columnWidth="515" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1f430f2-3319-4a68-80f3-9f60837bf987">
+	<queryString>
+		<![CDATA[SELECT * FROM centros]]>
+	</queryString>
+	<title>
+		<band height="60"/>
+	</title>
+	<detail>
+		<band height="150">
+			<textField>
+				<reportElement x="0" y="20" width="200" height="20" uuid="9b273b96-9562-4afa-94e0-6e4448fdac50"/>
+				<textFieldExpression><![CDATA["ID: " + $F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="40" width="200" height="20" uuid="bd1721b9-b48c-438b-ad4c-2ce9cf66cc22"/>
+				<textFieldExpression><![CDATA["Nombre: " + $F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="60" width="200" height="20" uuid="0a2f22ae-d516-4ca2-b6ad-88229a9817b6"/>
+				<textFieldExpression><![CDATA["Provincia: " + $F{provincia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="20" width="200" height="20" uuid="c28b3cf9-3130-45fb-961e-7ba15c2cd3af"/>
+				<textFieldExpression><![CDATA["Municipio: " + $F{municipio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="40" width="200" height="20" uuid="32bf18d9-897b-461e-938e-b83abea95c8d"/>
+				<textFieldExpression><![CDATA["Localidad: " + $F{localidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="60" width="200" height="20" uuid="1228cbfc-b773-4db5-aaad-56d7eff7b8ab"/>
+				<textFieldExpression><![CDATA["CP: " + $F{cp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="20" width="200" height="20" uuid="60ba046a-a3c7-4f61-8e59-286a9d2b22eb"/>
+				<textFieldExpression><![CDATA["Calle: " + $F{calle}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
